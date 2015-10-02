@@ -1,0 +1,4 @@
+alias t='~/todo/todo.sh'
+unalias sed 2> /dev/null
+alias sed='~/.local/bin/sed.exe'
+
