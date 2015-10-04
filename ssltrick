@@ -1,0 +1,23 @@
+# read certificate .pem base64
+alias ssl-opem='_(){ openssl x509 -in $1 -noout -text; }; _'
+
+# read cert request .pem base64
+alias ssl-oper='_(){ openssl req -in $1 -noout -text; }; _'
+
+# read cert request .der binary
+alias ssl-oder='_(){ openssl req -in $1 -inform der -noout -text; }; _'
+
+# read multiple certificate .pem base64
+alias ssl-opemu='_(){ for i in *; do openssl x509 -in $i -noout -text; done; }; _'
+
+# read multiple cert request .pem base64 
+alias ssl-operu='_(){ for i in *; do openssl req -in $i -noout -text; done; }; _'
+
+#import multiple pems in folder to keystore
+alias ssl-addpubjks='_(){ for i in $(ls *.pem|sort); do echo "loading $i into $1"; keytool -import -keystore $1 -alias $(basename $i .pem) -storepass $2 -file $i && echo 'success...';done; }; _'
+
+#list all from keystore
+alias ssl-jksls='_(){ keytool -v -list -keystore $1 -storepass $2; }; _'
+
+#1-keystorename 2-keystopass
+alias ssl-help='echo following commands\n ssl-opem read pem file - usage'
