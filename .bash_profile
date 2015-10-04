@@ -9,19 +9,23 @@ PATH=`echo $PATH`:~/.local/bin
 test ! -d /usr/ssl && mkdir /usr/ssl
 
 #bring certs from home 
-echo "Testing for SSL truststores"
-diff ~/.local/usr/ssl/certs/ /usr/ssl/certs/ &>/dev/null
-if [ $? == 0 ]
+if [ $HOSTNAME != "ISXXABUTBDL1C" ] #Where could I be?
   then
-  echo "SSL truststores OK!"
-  else
-    echo "Untrested SSL store folder, creating backup"
-    mv /usr/ssl/certs/ /usr/ssl/old.certs/
-    echo "creating links to new trusts"
-    ln -s ~/.local/usr/ssl/certs/ /usr/ssl/certs
-    echo "SSL truststores OK!"
-  fi
-
+    echo "Testing for SSL truststores"
+    diff ~/.local/usr/ssl/certs/ /usr/ssl/certs/ &>/dev/null
+    if [ $? == 0 ]
+      then
+        echo "SSL truststores OK!"
+      else
+        echo "Untrested SSL store folder, creating backup"
+        mv /usr/ssl/certs/ /usr/ssl/old.certs/
+        echo "creating links to new trusts"
+        ln -s ~/.local/usr/ssl/certs/ /usr/ssl/certs
+        echo "SSL truststores OK!"
+    fi
+else
+  echo "not at home"
+fi
 #Favorite editor
 export EDITOR=vim
 
