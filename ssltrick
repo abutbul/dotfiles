@@ -21,3 +21,9 @@ alias ssl-jksls='_(){ keytool -v -list -keystore $1 -storepass $2; }; _'
 
 #1-keystorename 2-keystopass
 alias ssl-help='echo following commands\n ssl-opem read pem file - usage'
+
+#1-root/intermediate to add 2-bundle.crt
+alias ssl-add2bundle='openssl x509 -in $1 -text >> $2'
+
+#1 bundle 2-cert to check for
+alias ssl-verify='openssl verify -verbose -x509_strict -CAfile $1 $2'
