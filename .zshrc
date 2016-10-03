@@ -51,7 +51,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails vagrant git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git gem vagrant rvm)
+plugins=(git gem virtualenv emoji-clock)
 
 source $ZSH/oh-my-zsh.sh
 case $- in *i*)
