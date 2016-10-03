@@ -1,4 +1,10 @@
-#!/bin/bash
-#check for vim version
-#use method for appropriate version
-
+if [ ! -d ~/.vim/bundle/ ]
+then 
+	mkdir -p ~/.vim/bundle/
+	ln -s ~/repositories/Vundle.vim ~/.vim/bundle/
+fi
+if [ ! -f ~/.vimrc ]
+then
+	ln -s ~/repositories/dotfiles/.vimrc ~/
+fi
+vim +PluginInstall +qall
