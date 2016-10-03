@@ -3,11 +3,11 @@
 
 # Path to your oh-my-zsh installation.
   export ZSH=/home/david/.oh-my-zsh
-
+  export TERM=xterm-256color
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bullet-train"
+ZSH_THEME="agnoster"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -55,7 +55,7 @@ plugins=(git gem vagrant rvm)
 
 source $ZSH/oh-my-zsh.sh
 case $- in *i*)
-    [ -z "$TMUX" ] && tmux attach -t base || tmux new -s base
+    [ -z "$TMUX" ] && tmux attach -t default || tmux new -s default 
 esac
 
 # User configuration
