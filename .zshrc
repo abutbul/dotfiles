@@ -54,9 +54,9 @@ ZSH_THEME="agnoster"
 plugins=(git gem virtualenv zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
-case $- in *i*)
-    [ -z "$TMUX" ] && tmux attach -t default || tmux new -s default 
-esac
+#case $- in *i*)
+#    [ -z "$TMUX" ] && tmux attach -t default || tmux new -s default 
+#esac
 
 # User configuration
 
