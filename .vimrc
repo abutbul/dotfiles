@@ -91,6 +91,7 @@ let g:syntastic_aggregate_errors = 1
 " let g:syntastic_quiet_messages = { "type": "style" } " style be gone
 let g:syntastic_python_checkers = ['flake8' , 'pylint']
 
+
 " end syntastic config
 
 " display and syntax highlights 
@@ -141,3 +142,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 " end nerdree config
+"
+"
+map <leader>r :!ruby %
