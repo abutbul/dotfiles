@@ -13,8 +13,5 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 # wget variant for omz sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
 git clone https://github.com/torhve/weechat-matrix-protocol-script.git
-
-git clone https://github.com/glowing-bear/glowing-bear
 git clone https://github.com/glowing-bear/glowing-bear
