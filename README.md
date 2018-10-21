@@ -1,6 +1,6 @@
 # dotfiles
 ## about
-personal packaging of important dot files
+personal packaging of important dot files - needs overhaul
 ## usage
 ```
 mkdir ~/repositories
